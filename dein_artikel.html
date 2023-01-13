@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mein Artikel | Kitchenware</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="body">
+
+    <header class="flex">
+
+        <div class="container-header">
+
+            <a href="./index_loggedin.html"> 
+                <img 
+                src="./img/logo.jpg" 
+                alt="Logo KITCHENWARE" 
+                width="220" />
+            </a>
+
+        </div>
+
+        <!-- <div class="container-header">
+
+
+        </div> -->
+
+        <nav class="container-header">
+
+            <a href="/index_loggedin.html">
+
+                <button id="neueArtikel"> Alle Artikel</button>
+                
+            </a>
+
+            <button id="logout" onclick="logout()"> Logout </button>
+
+        </nav>
+
+    </header>
+    <div class="meinArtikel">
+    <h2>MEIN ARTIKEL</h2>
+
+    <p id="infoText"> </p>
+
+    <div id="meinArtikel">
+
+        <label for="artikel">Gerät</label> <br>
+        <input id="artikel" type="text" value=""> <br>
+
+        <label for="bild">Bild URL</label> <br>
+        <input id="bild" type="text" value=""> <br>
+         <img id="bild_vorschau" width="300px" src="" alt=""> <br>
+         <!-- <button id="vermieten">Bild hochladen
+ 
+             <form action="/action_page.php">
+                 <input type="file" id="myFile" name="filename">
+                 <input type="submit">
+               </form>
+         </button> -->
+<br>
+        <label for="kategorie_id">Gerätekategorie</label> <br>
+        <select class="dropdown" name="kategorie" id="kategorie_id">
+            <option value="1">Nicht elektronische Geräte</option>
+            <option value="2">Elektronische Geräte</option>
+        </select> 
+<br>
+        <label for="beschreibung">Beschreibung</label> <br>
+        <textarea id="beschreibung" name="beschreibung"> </textarea> <br> <br>
+
+        <label for="preis">Preis pro Tag (CHF)</label> <br>
+        <input id="preis" type="number" min="0">
+
+        <p>Status</p>
+        <input type="radio" id="status-frei" name="status" value="1">
+        <label for="status-frei">Verfügbar</label><br>
+        <input type="radio" id="status-besetzt" name="status" value="0">
+        <label for="status-besetzt">Nicht Verfügbar</label><br>
+
+        <button class="hidden" id="button-neue" onclick="neuerArtikel()">Veröffentlichen</button>
+        <button class="hidden" id="button-aktualisieren" onclick="aktualisiereArtikel()">Aktualisieren</button>
+        <button class="hidden" id="button-loeschen" onclick="loescheArtikel()">Löschen</button>
+
+        <p id="nachricht"> </p>
+
+    </div>
+</div>
+
+<footer class="page-footer">
+    <ul class="mitte">
+        <li><a href="#">Impressum</a></li>
+        <li><a href="#">Datenschutz</a></li>
+    </ul>
+    <p class="footer-description">© Kitchenware  |  2023</p>
+
+</footer>
+
+    <script src="js/artikel.js"></script>
+
+</body>
+
+</html>
